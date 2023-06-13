@@ -8,8 +8,9 @@ public class Card {
 
     public Card(int value) {
         int divider = Rank.getSize();
-        int rankNumber = value % divider + 1;
-        int suitNumber = value / divider + 1;
+        value--;
+        int rankNumber = (value % divider) + 1;
+        int suitNumber = (value / divider) + 1;
         Rank rank = Rank.getRank(rankNumber);
         Suit suit = Suit.getSuit(suitNumber);
         this.rank = rank;

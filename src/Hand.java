@@ -16,6 +16,7 @@ public class Hand {
         cards.clear();
         jokers.clear();
         Set<Integer> randoms = getCardRandoms(count);
+        System.out.println(randoms);
         if (randoms.contains(53)) {
             jokers.add(Joker.BLACK);
             randoms.remove(53);
