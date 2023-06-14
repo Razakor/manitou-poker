@@ -1,4 +1,4 @@
-package enums;
+package razakor.poker.enums;
 
 import java.util.NoSuchElementException;
 

@@ -1,10 +1,13 @@
-import enums.Rank;
-import enums.Suit;
+package razakor.poker;
+
+import razakor.poker.enums.Rank;
+import razakor.poker.enums.Suit;
 
 public class Card {
 
-    private Rank rank;
-    private Suit suit;
+    private final Rank rank;
+    private final Suit suit;
+    private boolean used;
 
     public Card(int value) {
         int divider = Rank.getSize();
@@ -21,20 +24,25 @@ public class Card {
         return rank;
     }
 
-    public void setRank(Rank rank) {
-        this.rank = rank;
-    }
-
     public Suit getSuit() {
         return suit;
     }
 
-    public void setSuit(Suit suit) {
-        this.suit = suit;
+    public void setUsed(boolean used) {
+        this.used = used;
+    }
+
+    public boolean isUsed() {
+        return used;
     }
 
     @Override
     public String toString() {
-        return rank.getName() + suit.getName();
+        String string = rank.getName() + suit.getName();
+        if (used) {
+            return ANSI.redText(string);
+        } else {
+            return string;
+        }
     }
 }

@@ -1,8 +1,11 @@
-import java.util.Scanner;
+package razakor.poker;
 
 public class Main {
 
+
     public static void main(String[] args) {
+
+
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter number of cards");
 //        int count = scanner.nextInt();

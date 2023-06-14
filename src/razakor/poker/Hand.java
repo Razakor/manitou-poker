@@ -1,4 +1,6 @@
-import enums.Joker;
+package razakor.poker;
+
+import razakor.poker.enums.Joker;
 
 import java.util.*;
 
