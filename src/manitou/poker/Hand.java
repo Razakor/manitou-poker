@@ -1,16 +1,16 @@
-package razakor.poker;
+package manitou.poker;
 
-import razakor.poker.enums.Joker;
+import manitou.poker.enums.Joker;
 
 import java.util.*;
 
 public class Hand {
 
-    private final LinkedList<Card> cards;
+    private final List<Card> cards;
     private final List<Joker> jokers;
 
     public Hand() {
-        this.cards = new LinkedList<>();
+        this.cards = new ArrayList<>();
         this.jokers = new ArrayList<>();
     }
 
@@ -48,7 +48,7 @@ public class Hand {
         return random.nextInt(max + 1 - min) + min;
     }
 
-    public LinkedList<Card> getCards() {
+    public List<Card> getCards() {
         return cards;
     }
 
@@ -58,6 +58,7 @@ public class Hand {
 
     private void sortCards() {
         Comparator<Card> rankComparator = Comparator.comparing(card -> card.getRank().getValue());
+        rankComparator = rankComparator.reversed();
         Comparator<Card> suitComparator = Comparator.comparing(card -> card.getSuit().getValue());
         Comparator<Card> cardComparator = rankComparator.thenComparing(suitComparator);
         cards.sort(cardComparator);

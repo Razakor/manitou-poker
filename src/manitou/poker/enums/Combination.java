@@ -1,16 +1,19 @@
-package razakor.poker.enums;
+package manitou.poker.enums;
 
 public enum Combination {
     ROYAL_FLUSH(1),
     STRAIGHT_FLUSH(2),
-    FOUR_OF_A_KIND(3),
-    FULL_HOUSE(4),
-    FLUSH(5),
-    STRAIGHT(6),
-    THREE_OF_A_KIND(7),
-    TWO_PAIR(8),
-    HIGH_CARD(9),
-    PAIR(10);
+    POKER(3),
+    FOUR_OF_A_KIND(4),
+    FULL_HOUSE(5),
+    FLUSH(6),
+    STRAIGHT(7),
+    THREE_OF_A_KIND(8),
+    TWO_PAIR(9),
+    HIGH_PAIR(10),
+    PAIR(11),
+    ACE(12),
+    HIGH_CARD(13);
 
     private final int value;
 

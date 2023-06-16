@@ -1,6 +1,6 @@
-package razakor.poker.enums;
+package manitou.poker.enums;
 
-import razakor.poker.ANSI;
+import manitou.poker.ANSI;
 
 import java.util.NoSuchElementException;
 

@@ -1,4 +1,4 @@
-package razakor.poker.enums;
+package manitou.poker.enums;
 
 public enum Color {
     RED("R"),

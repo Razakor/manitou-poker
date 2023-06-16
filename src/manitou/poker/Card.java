@@ -1,7 +1,7 @@
-package razakor.poker;
+package manitou.poker;
 
-import razakor.poker.enums.Rank;
-import razakor.poker.enums.Suit;
+import manitou.poker.enums.Rank;
+import manitou.poker.enums.Suit;
 
 public class Card {
 
@@ -9,10 +9,15 @@ public class Card {
     private final Suit suit;
     private boolean used;
 
+    public Card(Rank rank, Suit suit) {
+        this.rank = rank;
+        this.suit = suit;
+    }
+
     public Card(int value) {
         int divider = Rank.getSize();
         value--;
-        int rankNumber = (value % divider) + 1;
+        int rankNumber = (value % divider) + 2;
         int suitNumber = (value / divider) + 1;
         Rank rank = Rank.getRank(rankNumber);
         Suit suit = Suit.getSuit(suitNumber);
